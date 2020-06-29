@@ -254,8 +254,8 @@ def count_short_ones(seq_of_lists):
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     count = 0
-    for number in range(len(seq_of_lists)):
-        if len(seq_of_lists[number]) < 3:
+    for number in seq_of_lists:
+        if len(number) < 3:
             count += 1
     return count
 
@@ -340,8 +340,8 @@ def draw_circles(window, points, radius, color):
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
-    for number in range(len(points)):
-        circle = rg.Circle(points[number], radius)
+    for number in points:
+        circle = rg.Circle(number, radius)
         circle.fill_color = color
         circle.attach_to(window)
     window.render()
